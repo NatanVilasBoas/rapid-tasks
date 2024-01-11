@@ -1,0 +1,20 @@
+.container{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #fffef9;
+}
+
+.taskList{ 
+    width: 60%;
+    background-color: #FBF6EE;
+    margin: 32px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.06);
+}
