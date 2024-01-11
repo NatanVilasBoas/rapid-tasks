@@ -35,6 +35,8 @@
     color: #FBF6EE;
     font-size: .8em;
     transition: background-color .25s ease-in-out;
+    font-family: inherit;
+    font-weight: 700;
 }
 
 .head button:hover{
