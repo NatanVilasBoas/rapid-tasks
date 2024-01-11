@@ -8,11 +8,12 @@ function Form() {
     const {task, addTask} = useTasksContext();
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
+    const [conclused, setConclused] = useState(false);
     const navigate = useNavigate();
 
     const onSave = (e) =>{
         e.preventDefault();
-        addTask({title, desc})
+        addTask({title, desc, conclused})
         navigate('/');
     }
 

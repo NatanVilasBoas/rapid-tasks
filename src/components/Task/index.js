@@ -1,8 +1,16 @@
+import { useTasksContext } from '../../context/Tasks';
 import styles from './Task.module.css';
 import penIcon from './ferramenta-lapis.png';
 import checkIcon from './marca-de-verificacao.png';
 
 function Task(props) {
+    const { tasks, setTasks} = useTasksContext();
+
+    const concluseTask = (task) =>{
+        const taskSelected = tasks.find(tasks.title === task.title)
+        
+    }   
+
     return(
         <div className={styles.container}>
             <div className={styles.containerText}>
@@ -11,7 +19,7 @@ function Task(props) {
             </div>
             <div className={styles.containerButton}>
                 <img src={penIcon}/>
-                <img src={checkIcon}/>
+                <img src={checkIcon} onClick={concluseTask}/>
             </div>
         </div>
     )

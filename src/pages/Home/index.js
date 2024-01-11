@@ -8,6 +8,8 @@ import { useTasksContext } from '../../context/Tasks';
 function Home(){    
     const {tasks, addTasks} = useTasksContext();
 
+    const tasksNotconclused = tasks.filter(task => task.conclused === false)
+
     return(
         <>
             <Banner />
@@ -19,7 +21,8 @@ function Home(){
                             <button>Nova tarefa</button>
                         </Link>
                     </div>
-                    {tasks.map(task => <Task title={task.title} text={task.desc}/>)}
+                    {
+                    tasksNotconclused.map(task => <Task title={task.title} text={task.desc}/>)}
                 </div>
             </section>
         </>
