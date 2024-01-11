@@ -2,9 +2,12 @@ import styles from './Home.module.css';
 import Task from '../../components/Task';
 import Banner from '../../components/Banner';
 import { Link } from 'react-router-dom';
+import { useTasksContext } from '../../context/Tasks';
 
 
 function Home(){    
+    const {tasks, addTasks} = useTasksContext();
+
     return(
         <>
             <Banner />
@@ -16,7 +19,7 @@ function Home(){
                             <button>Nova tarefa</button>
                         </Link>
                     </div>
-                    <Task title="Teste" text="Testando"/>
+                    {tasks.map(task => <Task title={task.title} text={task.desc}/>)}
                 </div>
             </section>
         </>

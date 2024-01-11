@@ -2,14 +2,16 @@ import styles from './Form.module.css';
 import InputField from '../InputField';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useTasksContext } from '../../context/Tasks';
 
 function Form() {
+    const {task, addTask} = useTasksContext();
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
 
     const onSave = (e) =>{
         e.preventDefault();
-        
+        addTask({title, desc})
     }
 
     return(
