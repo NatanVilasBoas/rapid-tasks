@@ -1,19 +1,23 @@
 .container{
-    width: 100%;
+    width: 90%;
     background-color: #fffbf6;
     height: 4.6em;
     border: 1px solid black;
     border-radius: 30px;
-    padding: 10px 10px 10px 30px;
+    padding: 15px 30px;
     align-items: center;
-    box-sizing: border-box;
     margin: 24px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container h5{
-    margin: 0;
+    margin: 20px 0;
 }
 
-.container p{
-    margin-top: 8px;
+
+.containerButton img{
+    width: 28px;
+    margin: 12px;
+    cursor: pointer;
 }

@@ -18,3 +18,25 @@
     border-radius: 24px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.06);
 }
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.head button{
+    border: none;
+    border-radius: 25px;
+    height: 3.5em;
+    width: 12em;
+    background-color: #86A7FC;
+    color: #FBF6EE;
+    font-size: .8em;
+    transition: background-color .25s ease-in-out;
+}
+
+.head button:hover{
+    background-color: #3468C0;
+}

@@ -9,7 +9,10 @@ function Home(){
             <Banner />
             <section className={styles.container}>
                 <div className={styles.taskList}>
-                    <h2>Lista de tarefas</h2>
+                    <div className={styles.head}>
+                        <h2>Lista de tarefas</h2>
+                        <button>Nova tarefa</button>
+                    </div>
                     <Task title="Teste" text="Testando"/>
                 </div>
             </section>
