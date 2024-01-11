@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffef9;
+}
+
+.container h2{
+    font-size: 32px;
+    font-weight: 600;
+}
