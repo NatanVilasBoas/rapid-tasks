@@ -37,6 +37,7 @@
     transition: background-color .25s ease-in-out;
     font-family: inherit;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .head button:hover{

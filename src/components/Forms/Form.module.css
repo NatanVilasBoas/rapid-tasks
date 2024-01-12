@@ -16,6 +16,7 @@
     font-family: inherit;
     font-weight: 700;
     transition: background-color .3s ease-in-out;
+    cursor: pointer;
 }
 
 .backButton:hover{
@@ -43,6 +44,7 @@
     font-weight: 700;
     font-size: .8em;
     transition: background-color .3s ease-in-out;
+    cursor: pointer;
 }
 
 .container form button:hover, .container form button:focus{
