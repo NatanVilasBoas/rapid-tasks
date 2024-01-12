@@ -10,7 +10,7 @@ function Task(props) {
         setConclused(true);
         setTimeout(() => {
             props.removedTask(task);
-          }, 1000);
+          }, 750);
     }
 
     return(
