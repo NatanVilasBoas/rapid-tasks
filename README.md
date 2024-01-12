@@ -4,7 +4,7 @@ Este é um site que permite que você crie rápidas tarefas.
 
 Com ele é possível criar tarefas com título e descrição e, quando terminá-las, concluir a tarefa.
 
-Para vê-lo em ação, acesse o link:
+O projeto ainda está em desenvolvimento e serão atribuídas mais funcionalidades.
 
 ## Requisitos
 Para instalação e utilização do projeto em sua máquina é necessário ter instalado NodeJs e, a partir do Node, instalar create react app
