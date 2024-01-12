@@ -7,7 +7,7 @@ Com ele é possível criar tarefas com título e descrição e, quando terminá-
 O projeto ainda está em desenvolvimento e serão atribuídas mais funcionalidades.
 
 ## Requisitos
-Para instalação e utilização do projeto em sua máquina é necessário ter instalado NodeJs e, a partir do Node, instalar create react app
+Para instalação e utilização do projeto em sua máquina é necessário ter instalado NodeJs.
 
 ## Instalação
 
