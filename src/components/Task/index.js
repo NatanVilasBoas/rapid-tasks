@@ -6,10 +6,6 @@ import checkIcon from './marca-de-verificacao.png';
 function Task(props) {
     const { tasks, setTasks} = useTasksContext();
 
-    const concluseTask = (task) =>{
-        const taskSelected = tasks.find(tasks.title === task.title)
-        
-    }   
 
     return(
         <div className={styles.container}>
@@ -19,7 +15,7 @@ function Task(props) {
             </div>
             <div className={styles.containerButton}>
                 <img src={penIcon}/>
-                <img src={checkIcon} onClick={concluseTask}/>
+                <img src={checkIcon}/>
             </div>
         </div>
     )

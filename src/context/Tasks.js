@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import {v4 as uuidv4 } from 'uuid'
 
 
 export const TasksContext = createContext();
@@ -18,10 +19,10 @@ export function useTasksContext(){
     const {tasks, setTasks} = useContext(TasksContext);
 
     function addTask(newTask){
-        let newList = [...tasks];
-
-        newList.push(newTask);
-        return setTasks(newList);
+        const taskWithId = { ...newTask, id: uuidv4() };
+    
+        let newList = [...tasks, taskWithId];
+        setTasks(newList);
     }
 
     return{
