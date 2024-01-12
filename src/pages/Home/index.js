@@ -6,9 +6,13 @@ import { useTasksContext } from '../../context/Tasks';
 
 
 function Home(){    
-    const {tasks, addTasks} = useTasksContext();
+    const {tasks, removeTask} = useTasksContext();
 
-    const tasksNotconclused = tasks.filter(task => task.conclused === false)
+    const tasksNotConclused = tasks.filter((task) => !task.conclused);
+
+    const handleRemoveTask = (taskId) => {
+        removeTask(taskId);
+    };
 
     return(
         <>
@@ -22,7 +26,7 @@ function Home(){
                         </Link>
                     </div>
                     {
-                    tasksNotconclused.map(task => <Task key={task.id} title={task.title} text={task.desc}/>)}
+                    tasksNotConclused.map(task => <Task key={task.id} title={task.title} text={task.desc} removedTask={() => handleRemoveTask(task.id)}/>)}
                 </div>
             </section>
         </>

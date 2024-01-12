@@ -25,8 +25,13 @@ export function useTasksContext(){
         setTasks(newList);
     }
 
+    function removeTask(taskId) {
+        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+      }
+
     return{
         tasks,
-        addTask
+        addTask,
+        removeTask
     }
 }

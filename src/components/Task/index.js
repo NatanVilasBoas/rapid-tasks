@@ -4,8 +4,10 @@ import penIcon from './ferramenta-lapis.png';
 import checkIcon from './marca-de-verificacao.png';
 
 function Task(props) {
-    const { tasks, setTasks} = useTasksContext();
 
+    const handleRemoveTask = (task) => {
+        props.removedTask(task);
+    }
 
     return(
         <div className={styles.container}>
@@ -15,7 +17,7 @@ function Task(props) {
             </div>
             <div className={styles.containerButton}>
                 <img src={penIcon}/>
-                <img src={checkIcon}/>
+                <img src={checkIcon} onClick={ (task) => handleRemoveTask(task)}/>
             </div>
         </div>
     )
