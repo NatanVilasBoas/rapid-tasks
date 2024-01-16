@@ -13,6 +13,10 @@ function Task(props) {
           }, 750);
     }
 
+    const handleEditTask = (task) => {
+        
+    }
+
     return(
         <div className={`${styles.container} ${conclused === true ? styles.conclused : ''}`}>
             <div className={styles.containerText}>
@@ -20,7 +24,7 @@ function Task(props) {
                 <p className={styles.text}>{props.text}</p>
             </div>
             <div className={styles.containerButton}>
-                <img src={penIcon}/>
+                <img src={penIcon} onClick={ (task) => handleEditTask(task)}/>
                 <img src={checkIcon} onClick={ (task) => handleRemoveTask(task)}/>
             </div>
         </div>
