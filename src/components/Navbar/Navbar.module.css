@@ -9,17 +9,34 @@
     box-sizing: border-box;
 }
 
+.container .content{
+    width: inherit;
+    height: inherit;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 32px;
+    box-sizing: border-box;
+}
+
 .container a{
     text-decoration: none;
     color: #03001C;
     transition: color 0.3s ease-in-out;
+    font-weight: 700
+}
+
+.container p{
+    color: #03001C;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .container a:hover{
     color: #666690;
 }
 
-.container .profile img{
+.profile img{
     border-radius: 50%;
     width: 3em;
     height: 3em;

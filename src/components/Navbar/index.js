@@ -5,9 +5,12 @@ import profile from './profile.png';
 function Navbar(){
     return(
         <section className={styles.container}>
-            <Link to='/'>
-                <a>Home</a>
-            </Link>
+            <div className={styles.content}>
+                <p>Rapid-Tasks</p>
+                <Link to='/'>
+                    <a>Home</a>
+                </Link>
+            </div>
             <div className={styles.profile}>
                 <img src={profile} alt="profile"/>
             </div>
