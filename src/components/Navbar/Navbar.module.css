@@ -19,18 +19,19 @@
     box-sizing: border-box;
 }
 
-.container a{
-    text-decoration: none;
-    color: #03001C;
-    transition: color 0.3s ease-in-out;
-    font-weight: 700
-}
-
 .container p{
     color: #03001C;
     font-weight: 700;
     font-size: 20px;
 }
+
+.container a{
+    text-decoration: none;
+    color: #03001C;
+    transition: color 0.3s ease-in-out;
+    font-weight: 400
+}
+
 
 .container a:hover{
     color: #666690;

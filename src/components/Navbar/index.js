@@ -8,7 +8,7 @@ function Navbar(){
             <div className={styles.content}>
                 <p>Rapid-Tasks</p>
                 <Link to='/'>
-                    <a>Home</a>
+                    Home
                 </Link>
             </div>
             <div className={styles.profile}>
