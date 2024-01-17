@@ -2,7 +2,7 @@
 
 Este é um site que permite que você crie rápidas tarefas.
 
-Com ele é possível criar tarefas com título e descrição e, quando terminá-las, concluir a tarefa.
+Com ele é possível criar tarefas com título e descrição, editá-las após salvas e, quando terminá-las, concluir a tarefa.
 
 O projeto ainda está em desenvolvimento e serão atribuídas mais funcionalidades.
 
