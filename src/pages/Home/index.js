@@ -24,7 +24,7 @@ function Home(){
                         </Link>
                     </div>
                     {
-                    tasksNotConclused.map(task => <Task key={task.id} title={task.title} text={task.desc} removedTask={() => handleRemoveTask(task.id)}/>)}
+                    tasksNotConclused.map(task => <Task key={task.id} id={task.id} title={task.title} text={task.desc} removedTask={() => handleRemoveTask(task.id)}/>)}
                 </div>
             </section>
         </>

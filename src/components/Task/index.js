@@ -2,9 +2,11 @@ import { useState } from 'react';
 import styles from './Task.module.css';
 import penIcon from './ferramenta-lapis.png';
 import checkIcon from './marca-de-verificacao.png';
+import { useNavigate } from 'react-router-dom';
 
 function Task(props) {
     const [conclused, setConclused] = useState(false);
+    const navigate = useNavigate();
 
     const handleRemoveTask = (task) => {
         setConclused(true);
@@ -13,8 +15,8 @@ function Task(props) {
           }, 750);
     }
 
-    const handleEditTask = (task) => {
-        
+    const handleEditTask = () => {
+        navigate(`/${props.id}`)
     }
 
     return(
@@ -24,8 +26,8 @@ function Task(props) {
                 <p className={styles.text}>{props.text}</p>
             </div>
             <div className={styles.containerButton}>
-                <img src={penIcon} onClick={ (task) => handleEditTask(task)}/>
-                <img src={checkIcon} onClick={ (task) => handleRemoveTask(task)}/>
+                <img src={penIcon} alt='editar' onClick={ handleEditTask}/>
+                <img src={checkIcon} alt='concluir' onClick={ (task) => handleRemoveTask(task)}/>
             </div>
         </div>
     )

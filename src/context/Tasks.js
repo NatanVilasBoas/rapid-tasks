@@ -32,16 +32,13 @@ export function useTasksContext(){
 
       function editTask(taskToEdit) {
         let newList = tasks.map((task) => (task.id === taskToEdit.id ? { ...taskToEdit } : task));
-        const taskToChange = newList.find((task) => task.id === taskToEdit.id);
-        taskToChange.title = taskToEdit.title
-        taskToChange.text = taskToEdit.text
-        
         setTasks(newList);
       }
 
     return{
         tasks,
         addTask,
-        removeTask
+        removeTask,
+        editTask
     }
 }
