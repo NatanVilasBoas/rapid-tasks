@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import styles from './EditTask.module.css';
 import { useTasksContext } from '../../context/Tasks';
 import { useEffect, useState } from 'react';
+import InputField from '../../components/InputField';
 
 
 
@@ -35,20 +36,23 @@ function EditTask() {
 
     return(
         <section className={styles.container}>
-            <Link to='/'>
-            <button className={styles.backButton}>Cancelar</button>
-            </Link>
-            <form onSubmit={onSave}>
-                <input
-                label='Titulo' 
-                value={title}
-                onChange={e => setTitle(e.target.value)}/>
-                <input 
-                label='Decrição' 
-                value={desc} 
-                onChange={e => setDesc(e.target.value)}/>
-                <button>Editar Tarefa</button>
-            </form>
+            <div className={styles.content}>
+                <div className={styles.head}>
+                    <h2>Editando a tarefa '{title}'</h2>
+                    <Link to='/'>
+                    <button className={styles.backButton}>Cancelar</button>
+                    </Link>
+                </div>
+                <form onSubmit={onSave}>
+                    <InputField label="Título" 
+                        value={title} 
+                        saveInfo={(value) => {setTitle(value)}}/>
+                    <InputField label="Descrição" 
+                        value={desc} 
+                        saveInfo={(value) => {setDesc(value)}}/>
+                    <button>Editar Tarefa</button>
+                </form>
+            </div>
         </section>
     )
 }

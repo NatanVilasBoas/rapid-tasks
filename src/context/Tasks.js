@@ -23,7 +23,6 @@ export function useTasksContext(){
     
         let newList = [...tasks, taskWithId];
         setTasks(newList);
-        console.log(taskWithId);
     }
 
     function removeTask(taskId) {
