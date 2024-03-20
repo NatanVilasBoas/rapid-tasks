@@ -5,32 +5,32 @@ import { useState } from 'react';
 import { useTasksContext } from '../../context/Tasks';
 
 function Form() {
-    const {task, addTask} = useTasksContext();
+    const { addTask } = useTasksContext();
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
-    const [conclused, setConclused] = useState(false);
+    const conclused = false;
     const navigate = useNavigate();
 
-    const onSave = (e) =>{
+    const onSave = (e) => {
         e.preventDefault();
-        addTask({title, desc, conclused})
+        addTask({ title, desc, conclused })
         navigate('/');
     }
 
-    return(
+    return (
         <section className={styles.container}>
             <Link to='/'>
-            <button className={styles.backButton}>Voltar</button>
+                <button className={styles.backButton}>Voltar</button>
             </Link>
             <form onSubmit={onSave}>
-                <InputField 
-                label='Titulo' 
-                placeholder='Digite um título...' 
-                saveInfo={value => setTitle(value)}/>
-                <InputField 
-                label='Decrição' 
-                placeholder='Digite a descrição...' 
-                saveInfo={value => setDesc(value)}/>
+                <InputField
+                    label='Titulo'
+                    placeholder='Digite um título...'
+                    saveInfo={value => setTitle(value)} />
+                <InputField
+                    label='Decrição'
+                    placeholder='Digite a descrição...'
+                    saveInfo={value => setDesc(value)} />
                 <button>Salvar Tarefa</button>
             </form>
         </section>
